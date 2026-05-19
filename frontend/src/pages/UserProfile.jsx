@@ -11,6 +11,7 @@ import { useAuth } from '../context/AuthContext'
 import { userProfileApi } from '../services/api'
 import Button from '../components/Button'
 import Input from '../components/Input'
+import { SkeletonProfile } from '../components/ui/Skeleton'
 
 const AVATAR_GRADIENTS = [
   'from-indigo-500 to-purple-600',
@@ -138,14 +139,7 @@ export default function UserProfile() {
     url.startsWith('http') ? url : `https://${url}`
 
   if (loading) {
-    return (
-      <div className="min-h-screen bg-black flex items-center justify-center">
-        <div className="relative">
-          <div className="w-12 h-12 border-2 border-zinc-800 rounded-full" />
-          <div className="absolute top-0 left-0 w-12 h-12 border-2 border-transparent border-t-indigo-500 rounded-full animate-spin" />
-        </div>
-      </div>
-    )
+    return <SkeletonProfile />
   }
 
   return (

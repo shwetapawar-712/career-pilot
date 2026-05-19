@@ -24,6 +24,51 @@ import {
 } from 'lucide-react'
 import { resumeApi, jobTrackerApi } from '../services/api'
 import Button from '../components/Button'
+import {
+  SkeletonAction,
+  SkeletonStat,
+  SkeletonRow,
+  SkeletonBlock
+} from '../components/ui/Skeleton'
+
+function DashboardSkeleton() {
+  return (
+    <div>
+      {/* Quick Actions skeleton */}
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-10">
+        {Array.from({ length: 7 }).map((_, i) => (
+          <SkeletonAction key={i} />
+        ))}
+      </div>
+
+      {/* Stats Row skeleton */}
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-5 mb-10">
+        {Array.from({ length: 5 }).map((_, i) => (
+          <SkeletonStat key={i} />
+        ))}
+      </div>
+
+      {/* Two-column content skeleton */}
+      <div className="grid lg:grid-cols-2 gap-10">
+        {[0, 1].map((col) => (
+          <div key={col}>
+            <div className="flex justify-between items-center mb-6">
+              <SkeletonBlock className="h-7 w-52" />
+              <SkeletonBlock className="h-4 w-20" />
+            </div>
+            <div className="rounded-[2rem] bg-card border border-border overflow-hidden shadow-sm">
+              <div className="divide-y divide-border">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <SkeletonRow key={i} />
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
 
 const STATUS_CONFIG = {
   saved: { label: 'Saved', color: 'bg-muted text-muted-foreground border border-border', icon: Star },
@@ -112,11 +157,7 @@ export default function Dashboard() {
         </motion.div>
 
         {loading ? (
-          <div className="flex items-center justify-center py-32">
-            <div className="relative">
-              <div className="w-16 h-16 border-4 border-muted border-t-primary rounded-full animate-spin" />
-            </div>
-          </div>
+          <DashboardSkeleton />
         ) : (
           <motion.div variants={containerVariants} initial="hidden" animate="visible">
             {fetchError && (

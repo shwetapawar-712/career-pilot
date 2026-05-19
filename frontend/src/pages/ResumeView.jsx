@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown'
 import { resumeApi } from '../services/api'
 import Button from '../components/Button'
 import Card from '../components/Card'
+import { SkeletonResumeView } from '../components/ui/Skeleton'
 
 export default function ResumeView() {
   const { resumeId } = useParams()
@@ -82,16 +83,7 @@ export default function ResumeView() {
   }
 
   if (loading) {
-    return (
-      <div className="min-h-screen bg-background">
-        <div className="flex items-center justify-center py-20">
-          <div className="flex items-center gap-3 text-muted-foreground">
-            <div className="w-5 h-5 border-2 border-primary border-t-transparent rounded-full animate-spin" />
-            Loading resume...
-          </div>
-        </div>
-      </div>
-    )
+    return <SkeletonResumeView />
   }
 
   return (

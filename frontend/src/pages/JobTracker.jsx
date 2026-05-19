@@ -8,6 +8,7 @@ import Card from '../components/Card'
 import EmptyJobState from '../components/EmptyJobState'
 import CompanyResearch from '../components/CompanyResearch'
 import { Sparkles } from 'lucide-react'
+import { SkeletonTracker } from '../components/ui/Skeleton'
 
 const JobTracker = () => {
   const [trackedJobs, setTrackedJobs] = useState([])
@@ -109,12 +110,7 @@ const JobTracker = () => {
   if (loading) {
     return (
       <Layout>
-        <div className="min-h-screen flex items-center justify-center">
-          <div className="flex flex-col items-center gap-4">
-            <div className="w-12 h-12 border-4 border-border border-t-primary rounded-full animate-spin"></div>
-            <p className="text-muted-foreground">Loading tracked jobs...</p>
-          </div>
-        </div>
+        <SkeletonTracker />
       </Layout>
     )
   }
