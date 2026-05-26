@@ -81,6 +81,14 @@ const DEFAULT_PROJECTS = [
   }
 ];
 
+const ensureAbsoluteUrl = (url) => {
+  if (!url || url === "#") return "#";
+  if (/^https?:\/\//i.test(url)) {
+    return url;
+  }
+  return `https://${url}`;
+};
+
 export default function Projects({
   projects = DEFAULT_PROJECTS,
   title = "CHOOSE YOUR QUEST",
@@ -457,7 +465,7 @@ export default function Projects({
                     <div className="flex items-center gap-3 mt-auto">
                       {project.liveUrl && (
                         <a
-                          href={project.liveUrl}
+                          href={ensureAbsoluteUrl(project.liveUrl)}
                           target="_blank"
                           rel="noopener noreferrer"
                           onClick={(e) => e.stopPropagation()}
@@ -469,7 +477,7 @@ export default function Projects({
                       )}
                       {project.githubUrl && (
                         <a
-                          href={project.githubUrl}
+                          href={ensureAbsoluteUrl(project.githubUrl)}
                           target="_blank"
                           rel="noopener noreferrer"
                           onClick={(e) => e.stopPropagation()}
@@ -569,7 +577,7 @@ export default function Projects({
                             <div className="col-span-1 flex items-center justify-center gap-3">
                               {project.liveUrl && (
                                 <a
-                                  href={project.liveUrl}
+                                  href={ensureAbsoluteUrl(project.liveUrl)}
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   className="text-neutral-400 hover:text-[#00f0ff] transition-colors"
@@ -580,7 +588,7 @@ export default function Projects({
                               )}
                               {project.githubUrl && (
                                 <a
-                                  href={project.githubUrl}
+                                  href={ensureAbsoluteUrl(project.githubUrl)}
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   className="text-neutral-400 hover:text-white transition-colors"
