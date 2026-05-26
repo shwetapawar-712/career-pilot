@@ -1,3 +1,10 @@
+## [1.22.1](https://github.com/anurag3407/career-pilot/compare/v1.22.0...v1.22.1) (2026-05-26)
+
+
+### Bug Fixes
+
+* **usePresence:** deduplicate userIds and clarify eslint-disable comment ([919482d](https://github.com/anurag3407/career-pilot/commit/919482de962742a4a2bdeafab4d978f1f5ca4acb))
+
 # [1.22.0](https://github.com/anurag3407/career-pilot/compare/v1.21.0...v1.22.0) (2026-05-26)
 
 
