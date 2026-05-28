@@ -71,6 +71,7 @@ const RepoAnalyzerDashboard = lazy(() => import('./pages/RepoAnalyzer/Dashboard'
 const RepoAnalyzerWorkspace = lazy(() => import('./pages/RepoAnalyzer/Workspace'));
 import ScrollToTop from "./components/ScrollToTop";
 import RainforestCanopy from './components/portfolio/templates/Rainforest_Canopy/index.jsx';
+
 import TestSocialLinks from './pages/TestSocialLinks';
 
 function ProtectedRoute({ children }) {
@@ -182,6 +183,7 @@ function AppRoutes() {
         <Route path="/templates" element={<RouteErrorBoundary><TemplateGallery /></RouteErrorBoundary>} />
         <Route path="/templates/chatbot" element={<ChatbotPortfolio />} />
         <Route path="/templates/gamified-xp" element={<GamifiedXP />} />
+        
         {/* Core Protected Routes */}
         <Route 
   path="/dashboard" 
