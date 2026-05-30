@@ -2,6 +2,7 @@ import JetLandingPage from './JetLandingPage'
 import LandingNavbar from '../components/ui/LandingNavbar'
 import FeaturesSection, { AdditionalFeatures } from '../components/ui/FeaturesSection'
 import PortfolioShowcaseSection from '../components/ui/PortfolioShowcaseSection'
+import ProjectVisualizerSection from '../components/ui/ProjectVisualizerSection'
 import HowItWorksSection from '../components/ui/HowItWorksSection'
 import TestimonialsSection from '../components/ui/TestimonialsSection'
 import CTASection from '../components/ui/CTASection'
@@ -32,6 +33,9 @@ export default function Home() {
 
       {/* Portfolio Showcase Section */}
       <PortfolioShowcaseSection />
+
+      {/* Project Visualizer Section */}
+      <ProjectVisualizerSection />
 
       {/* How It Works Section */}
       <HowItWorksSection />
