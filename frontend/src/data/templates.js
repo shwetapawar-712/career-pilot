@@ -341,13 +341,14 @@ export const templates = [
     "id": "Chromatic_Glitch",
     "title": "Chromatic Glitch",
     "category": "Portfolio",
-    "colorScheme": "Dark",
-    "layout": "Grid",
-    "author": "System",
-    "views": 1028,
-    "rating": 4.5,
+    "colorScheme": "Colorful",
+    "layout": "Interactive",
+    "author": "Vexx",
+    "views": 2700,
+    "rating": 4.9,
     "image": "/template-previews/Chromatic_Glitch.png",
-    "createdAt": "2026-05-01"
+    "createdAt": "2026-05-31",
+    "isComplete": true
   },
   {
     "id": "Cinematic",
@@ -2067,12 +2068,12 @@ export const templates = [
     "title": "Swiss Typography",
     "category": "Portfolio",
     "colorScheme": "Dark",
-    "layout": "Grid",
-    "author": "System",
-    "views": 1171,
-    "rating": 4.5,
+    "layout": "Interactive",
+    "author": "Vexx",
+    "views": 2300,
+    "rating": 4.9,
     "image": "/template-previews/Swiss_Typography.png",
-    "createdAt": "2026-05-01",
+    "createdAt": "2026-05-31",
     "isComplete": true
   },
   {
