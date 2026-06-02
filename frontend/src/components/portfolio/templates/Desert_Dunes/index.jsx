@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence, useInView } from 'framer-motion';
+import React from 'react';
+import data from '../../../../data/dummy_data.json';
 import {
   Github,
   Linkedin,
@@ -1253,8 +1255,8 @@ export default function DesertDunes() {
         <Footer />
       </div>
     </>
-import React from 'react';
-import data from '../../../../data/dummy_data.json';
+    );
+}
 
 /* ─────────────────────────────────────────────
    DESIGN TOKENS — Desert Dunes palette
