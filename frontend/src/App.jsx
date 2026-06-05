@@ -29,10 +29,8 @@ const ResumeBuilder = lazy(() => import('./pages/ResumeBuilder'));
 import TextToResume from './pages/TextToResume';
 import About from './components/portfolio/templates/Tech_Startup/About';
 import ChatbotPortfolio from "./components/portfolio/templates/Chatbot_Portfolio";
-import GamifiedXP from "./components/portfolio/templates/Gamified_XP";
-import TelescopeZoom from "./components/portfolio/templates/Telescope_Zoom";
-import DayNightCycle from './components/portfolio/templates/Day_Night_Cycle/index.jsx';
-import ScrollTape from './components/portfolio/templates/Scroll_Tape';
+import GlassmorphismTemplate from "./components/portfolio/templates/Glassmorphism/index";
+
 import JobTracker from './pages/JobTracker';
 
 const Community = lazy(() => import('./pages/Community'));
@@ -250,24 +248,8 @@ function AppRoutes() {
 
         {/* Template Gallery Route (Registered at /templates) */}
         <Route path="/templates" element={<TemplateGallery />} />
-
-        
-
-        <Route path="/templates/chatbot" element={<ChatbotPortfolio />} />
-
-        {/* <Route path="/templates/day-night-cycle" element={<DayNightCycle />} /> */}
-        <Route path="/templates/rainforest-canopy" element={<RainforestCanopy />} />
-        <Route path="/templates/northern-fjords" element={<NorthernFjords />} />
-        <Route path="/templates/duotone-bold" element={<DuotoneBold />} />
-        <Route path="/templates/chromatic-glitch" element={<ChromaticGlitch />} />
-        <Route path="/templates/swiss-typography" element={<SwissTypography />} />
-        <Route path="/templates/desert-dunes" element={<DesertDunes />} />
-        <Route path="/templates/psychedelic-swirl" element={<PsychedelicSwirl />} />
-        <Route path="/templates/memphis-pop" element={<MemphisPop />} />
-        <Route path="/templates/cassette-mixtape" element={<CassetteMixtape />} />
-        <Route path="/templates/magnetic-dock" element={<MagneticDock />} />
-        <Route path="/templates/vercel-deploy" element={<VercelDeploy />} />
-        
+        <Route path="/templates/chatbot" element={<ChatbotPortfolio />} /> 
+        <Route path="/templates/glassmorphism" element={<GlassmorphismTemplate/>} />
         {/* Core Protected Routes */}
         <Route 
   path="/dashboard" 
