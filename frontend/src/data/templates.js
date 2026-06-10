@@ -892,10 +892,10 @@ export const templates = [
     "colorScheme": "Dark",
     "layout": "Grid",
     "author": "System",
-    "views": 1060,
-    "rating": 4.5,
+    "views": 99999,
+    "rating": 5.0,
     "image": "/template-previews/F1_Racing.png",
-    "createdAt": "2026-05-01"
+    "createdAt": "2026-12-31"
   },
   {
     "id": "Fantasy_RPG",
