@@ -58,6 +58,11 @@ Project maintainers are responsible for clarifying standards of acceptable behav
 
 ## Getting Started
 
+> Note:
+> This document provides the complete setup requirements for contributors who want to run the full application locally, including backend services, AI integrations, and job-search features.
+>
+> If you are making documentation changes or working on limited frontend tasks, not all of the services listed below may be required. See CONTRIBUTING.md for a simplified onboarding guide.
+
 ### Prerequisites
 
 Before contributing, ensure you have:
