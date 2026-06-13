@@ -1,3 +1,17 @@
+# [1.234.0](https://github.com/anurag3407/career-pilot/compare/v1.233.0...v1.234.0) (2026-06-13)
+
+
+### Bug Fixes
+
+* resolve merge conflict in LinkedInOptimizer ([325cb93](https://github.com/anurag3407/career-pilot/commit/325cb9346729a40a51cc0be395616b7016f3cd90))
+* resolve syntax error in templates data ([88eab63](https://github.com/anurag3407/career-pilot/commit/88eab634009508566675ea9fd033c3574700a1d2))
+* resolve templates data syntax issue ([0a80f8e](https://github.com/anurag3407/career-pilot/commit/0a80f8ec0629f481b99fdf23071563385d94332b))
+
+
+### Features
+
+* update website favicon ([33c9a55](https://github.com/anurag3407/career-pilot/commit/33c9a55852222b5163995e820fd373cfd4a8b102))
+
 # [1.233.0](https://github.com/anurag3407/career-pilot/compare/v1.232.1...v1.233.0) (2026-06-13)
 
 
