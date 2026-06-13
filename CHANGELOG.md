@@ -1,3 +1,15 @@
+# [1.233.0](https://github.com/anurag3407/career-pilot/compare/v1.232.1...v1.233.0) (2026-06-13)
+
+
+### Bug Fixes
+
+* resolve templates syntax error ([211c5e8](https://github.com/anurag3407/career-pilot/commit/211c5e864f0cada9d137b88a43bd8c910d030903))
+
+
+### Features
+
+* add Accordion Fold Brochure portfolio template ([18d2728](https://github.com/anurag3407/career-pilot/commit/18d2728af1325b0615b3241eb021e9defa910d44))
+
 ## [1.232.1](https://github.com/anurag3407/career-pilot/compare/v1.232.0...v1.232.1) (2026-06-13)
 
 
