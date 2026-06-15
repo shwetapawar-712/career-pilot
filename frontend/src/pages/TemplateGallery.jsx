@@ -5,7 +5,7 @@ import DeployModal from "../components/portfolio/DeployModal";
 import ThemeSelector from "../components/portfolio/ThemeSelector";
 import { templates } from '../data/templates';
 import { motion, AnimatePresence } from "framer-motion";
-import { Moon, Sun, ChevronDown, Check, Eye, Star, Sparkles, X } from "lucide-react";
+import { Moon, Sun, ChevronDown, Check, Eye, Star, Sparkles, X, Search } from "lucide-react";
 import { useSearchParams } from "react-router-dom";
 import { PortfolioProvider } from '../context/PortfolioContext.jsx';
 
@@ -367,6 +367,7 @@ export default function TemplateGallery() {
   const previewTemplateId = searchParams.get("preview");
   const [hoveredCard, setHoveredCard] = useState(null);
 
+  const [searchQuery, setSearchQuery] = useState("");
   const [category, setCategory] = useState("All");
   const [colorScheme, setColorScheme] = useState("All");
   const [layout, setLayout] = useState("All");
@@ -429,12 +430,17 @@ export default function TemplateGallery() {
   ];
 
   const filteredTemplates = templates.filter((template) => {
+    const q = searchQuery.trim().toLowerCase();
+    const matchesSearch =
+      !q ||
+      (template.title || '').toLowerCase().includes(q) ||
+      (template.id || '').toLowerCase().includes(q);
     const matchesCategory =
       category === 'All' || template.category === category;
     const matchesColorScheme =
       colorScheme === 'All' || template.colorScheme === colorScheme;
     const matchesLayout = layout === 'All' || template.layout === layout;
-    return matchesCategory && matchesColorScheme && matchesLayout;
+    return matchesSearch && matchesCategory && matchesColorScheme && matchesLayout;
   });
 
   const sortedTemplates = [...filteredTemplates].sort((a, b) => {
@@ -530,6 +536,28 @@ export default function TemplateGallery() {
           />
         </div>
 
+        {/* Search bar */}
+        <div className="mb-5 relative">
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" />
+          <input
+            id="template-search"
+            type="text"
+            placeholder="Search templates…"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="w-full pl-11 pr-10 py-3 rounded-xl border border-border bg-card text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400 transition-all duration-200"
+          />
+          {searchQuery && (
+            <button
+              onClick={() => setSearchQuery('')}
+              className="absolute right-3 top-1/2 -translate-y-1/2 p-1 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground transition-colors"
+              aria-label="Clear search"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          )}
+        </div>
+
         <div className="flex flex-wrap items-center gap-3 mb-8">
           <FilterSelect
             value={category}
@@ -556,7 +584,9 @@ export default function TemplateGallery() {
 
         {sortedTemplates.length === 0 ? (
           <div className="text-center text-muted-foreground mt-12 text-xl">
-            No templates match the selected criteria.
+            {searchQuery.trim()
+              ? `No templates found matching "${searchQuery.trim()}".`
+              : 'No templates match the selected criteria.'}
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">

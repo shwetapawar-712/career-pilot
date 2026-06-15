@@ -105,73 +105,6 @@ export const templates = [
   "createdAt": "2026-06-12",
   "isComplete": true
 },
-
-  {
-  "id": "Vercel_Deploy",
-  "title": "Vercel Deploy",
-{
-  "id": "Virtual_Reality_Room_360",
-  "title": "Virtual Reality Room 360",
-  "category": "Portfolio",
-  "colorScheme": "Dark",
-  "layout": "Interactive",
-  "author": "ShaktiShrey-01",
-  "views": 0,
-  "rating": 0,
-  "image": "/template-previews/Virtual_Reality_Room_360.png",
-  "createdAt": "2026-06-12",
-  "isComplete": true
-},
-  {
-    "id": "Forensic_Investigator_Desk",
-    "title": "Forensic Investigator Desk",
-    "category": "Portfolio",
-    "colorScheme": "Dark",
-    "layout": "Interactive",
-    "author": "ShaktiShrey-01",
-    "views": 0,
-    "rating": 0,
-    "image": "/template-previews/Forensic_investigator_desk.png",
-    "createdAt": "2026-06-11",
-    "isComplete": true
-  },
-  {
-    "id": "IKEA_Assembly_Manual",
-    "title": "IKEA Assembly Manual",
-    "category": "Portfolio",
-    "colorScheme": "Light",
-    "layout": "Interactive",
-    "author": "System",
-    "views": 0,
-    "rating": 0,
-    "image": "/templates/IKEA_Assembly_Manual.png",
-    "createdAt": "2026-06-13",
-    "isComplete": true
-  },
-  {
-    "id": "Endless_Runner_Minigame",
-    "title": "Endless Runner Minigame",
-    "category": "Portfolio",
-    "colorScheme": "Dark",
-    "layout": "Interactive",
-    "author": "ShaktiShrey-01",
-    "views": 0,
-    "rating": 0,
-    "image": "/template-previews/Forensic_investigator_desk.png", 
-    "createdAt": "2026-06-11",
-    "isComplete": true
-  },
-  {
-    "image": "/template-previews/Endless_Runner_Minigame.png",
-    "createdAt": "2026-06-12",
-    isComplete: true
-},
-    isComplete: true,
-    "image": "/template-previews/Endless_Runner_Minigame.png",
-    "createdAt": "2026-06-12",
-    "isComplete": true
-    "isComplete": true,
-  },
   {
     "id": "Git_Commit_History_Tree",
     "title": "Git Commit History Tree",
@@ -2942,11 +2875,15 @@ export const templates = [
     "title": "Crossword Puzzle Word Fill",
     "category": "Portfolio",
     "colorScheme": "Dark",
-    "layout": "Crossword_Puzzle_Word_Fill",
+    "layout": "Interactive",
     "author": "System",
     "views": 1050,
     "rating": 4.8,
     "image": "/template-previews/crossword_puzzle_word_fill.png",
+    "createdAt": "2026-06-13",
+    "isComplete": true
+  },
+  {
     "id": "Autumn_Forest_Leaf_Fall",
     "title": "Autumn Forest Leaf Fall",
     "category": "Portfolio",
@@ -2957,6 +2894,19 @@ export const templates = [
     "rating": 0,
     "image": "/templates/Autumn_Forest_Leaf_Fall.png",
     "createdAt": "2026-06-13",
+    "isComplete": true
+  },
+  {
+    "id": "Deconstructed_UI_Components_Scatter",
+    "title": "Deconstructed UI Components Scatter",
+    "category": "Portfolio",
+    "colorScheme": "Dark",
+    "layout": "Interactive",
+    "author": "Antigravity",
+    "views": 0,
+    "rating": 5.0,
+    "image": "/templates/Deconstructed_UI_Components_Scatter.png",
+    "createdAt": "2026-06-14",
     "isComplete": true
   }
 ];
