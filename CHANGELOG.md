@@ -1,3 +1,10 @@
+# [1.249.0](https://github.com/anurag3407/career-pilot/compare/v1.248.5...v1.249.0) (2026-06-17)
+
+
+### Features
+
+* add portfolio content grammar and writing assistant ([#4181](https://github.com/anurag3407/career-pilot/issues/4181)) ([1566376](https://github.com/anurag3407/career-pilot/commit/156637659d8b400e0cdb3a5d69fe29b7a91143e1))
+
 ## [1.248.5](https://github.com/anurag3407/career-pilot/compare/v1.248.4...v1.248.5) (2026-06-16)
 
 
