@@ -1,3 +1,10 @@
+# [1.259.0](https://github.com/anurag3407/career-pilot/compare/v1.258.0...v1.259.0) (2026-06-21)
+
+
+### Features
+
+* add real-time search to template gallery ([#4112](https://github.com/anurag3407/career-pilot/issues/4112)) ([6ed1f8f](https://github.com/anurag3407/career-pilot/commit/6ed1f8f3b2d7501648d86299eb1e88bc69609041))
+
 # [1.258.0](https://github.com/anurag3407/career-pilot/compare/v1.257.0...v1.258.0) (2026-06-21)
 
 
